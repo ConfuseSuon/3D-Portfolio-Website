@@ -26,6 +26,7 @@ const Ball = ({ imgUrl }) => {
         <Decal
           position={[0, 0, 1]}
           flatShading
+          scale={1}
           rotation={[2 * Math.PI, 0, 6.25]}
           map={decal}
         />
@@ -36,7 +37,11 @@ const Ball = ({ imgUrl }) => {
 
 const BallCanvas = ({ icon }) => {
   return (
-    <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
+    <Canvas
+      frameloop="demand"
+      dpr={[1, 2]}
+      gl={{ preserveDrawingBuffer: true }}
+    >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
         <Ball imgUrl={icon} />
