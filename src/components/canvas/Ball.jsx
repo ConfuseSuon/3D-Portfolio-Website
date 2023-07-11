@@ -8,7 +8,6 @@ import {
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import CanvasLoader from "../Loader";
-import PropTypes from "prop-types";
 
 const Ball = ({ imgUrl }) => {
   const [decal] = useTexture([imgUrl]);
@@ -45,13 +44,6 @@ const BallCanvas = ({ icon }) => {
       <Preload all />
     </Canvas>
   );
-};
-
-Ball.propTypes = {
-  imgUrl: PropTypes.string.required,
-};
-BallCanvas.propTypes = {
-  icon: PropTypes.string.required,
 };
 
 export default BallCanvas;

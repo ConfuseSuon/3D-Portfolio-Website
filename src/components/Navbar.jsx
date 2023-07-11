@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../style";
 import { navLinks } from "../constants";
 import { menu, close } from "../assets";
-import logo from "../assets/businessLogo.svg";
+import logo from "../assets/suonLogo.svg";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -22,9 +22,9 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-white text-[18px] font-bold cursor-pointer flex">
-            Confuse &nbsp; <span className="sm:block hidden">| Suon </span>{" "}
+          <img src={logo} alt="logo" className="w-12 h-12 object-contain" />
+          <p className="text-white text-[20px] font-bold cursor-pointer flex ml-[-6px]">
+            <span className="sm:block hidden"> U O N </span>{" "}
           </p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
@@ -69,7 +69,7 @@ const Navbar = () => {
                     setActive(link.title);
                   }}
                 >
-                  <a href={`#${link.title}`}>{link.title}</a>
+                  <a href={`#${link.id}`}>{link.title}</a>
                 </li>
               );
             })}
